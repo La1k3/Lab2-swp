@@ -3,7 +3,6 @@ using System.Windows;
 using Microsoft.Speech.Recognition;
 using Microsoft.Speech.Synthesis;
 using System.Globalization;
-using System.Windows.Controls;
 
 namespace Lab2_swp
 {

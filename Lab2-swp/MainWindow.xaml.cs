@@ -3,6 +3,7 @@ using System.Windows;
 using Microsoft.Speech.Recognition;
 using Microsoft.Speech.Synthesis;
 using System.Globalization;
+using System.Windows.Controls;
 
 namespace Lab2_swp
 {
@@ -16,6 +17,7 @@ namespace Lab2_swp
         static bool done = false;
         public MainWindow()
         {
+            InitializeComponent();
             ss = new SpeechSynthesizer();
             ss.SetOutputToDefaultAudioDevice();
             ss.Speak("Witam w kaluklatorze");
@@ -28,8 +30,7 @@ namespace Lab2_swp
                 Enabled = true
             };
             sre.LoadGrammar(grammar);
-            sre.RecognizeAsync(RecognizeMode.Multiple);
-            InitializeComponent();
+            sre.RecognizeAsync(RecognizeMode.Multiple);        
         }
 
         private void Sre_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
